@@ -13,7 +13,8 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography
+  Typography,
+  Button
 } from '@material-ui/core';
 import getInitials from 'src/utils/getInitials';
 
@@ -95,6 +96,9 @@ const CustomerListResults = ({ customers, ...rest }) => {
                 <TableCell>
                   Registration date
                 </TableCell>
+                <TableCell>
+                  Edit
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -143,6 +147,9 @@ const CustomerListResults = ({ customers, ...rest }) => {
                   </TableCell>
                   <TableCell>
                     {moment(customer.createdAt).format('DD/MM/YYYY')}
+                  </TableCell>
+                  <TableCell>
+                    <Button color="primary" variant="contained">Edit</Button>
                   </TableCell>
                 </TableRow>
               ))}

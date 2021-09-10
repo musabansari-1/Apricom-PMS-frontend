@@ -21,6 +21,7 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
     <AppBar
       elevation={0}
       {...rest}
+      style={{ backgroundColor: 'black' }}
     >
       <Toolbar>
         <RouterLink to="/">
@@ -28,6 +29,15 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
         </RouterLink>
         <Box sx={{ flexGrow: 1 }} />
         <Hidden lgDown>
+          <IconButton style={{ color: 'red' }}>
+            <Badge
+              badgeContent={notifications.length}
+              color="primary"
+              variant="dot"
+            >
+              <NotificationsIcon />
+            </Badge>
+          </IconButton>
           <IconButton color="inherit">
             <Badge
               badgeContent={notifications.length}

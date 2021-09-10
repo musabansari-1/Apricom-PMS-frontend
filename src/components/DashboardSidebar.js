@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Avatar,
   Box,
-  Button,
+  // Button,
   Divider,
   Drawer,
   Hidden,
@@ -16,12 +16,13 @@ import {
   BarChart as BarChartIcon,
   Lock as LockIcon,
   Settings as SettingsIcon,
-  ShoppingBag as ShoppingBagIcon,
+  // ShoppingBag as ShoppingBagIcon,
   User as UserIcon,
   UserPlus as UserPlusIcon,
   Users as UsersIcon
 } from 'react-feather';
 import NavItem from './NavItem';
+import './DashboardSidebar.css';
 
 const user = {
   avatar: '/static/images/avatars/avatar_6.png',
@@ -40,11 +41,11 @@ const items = [
     icon: UsersIcon,
     title: 'Customers'
   },
-  {
-    href: '/app/products',
-    icon: ShoppingBagIcon,
-    title: 'Products'
-  },
+  // {
+  //   href: '/app/products',
+  //   icon: ShoppingBagIcon,
+  //   title: 'Products'
+  // },
   {
     href: '/app/account',
     icon: UserIcon,
@@ -134,7 +135,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
         </List>
       </Box>
       <Box sx={{ flexGrow: 1 }} />
-      <Box
+      {/* <Box
         sx={{
           backgroundColor: 'background.default',
           m: 2,
@@ -169,8 +170,8 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
           >
             See PRO version
           </Button>
-        </Box>
-      </Box>
+        </Box> */}
+      {/* </Box> */}
     </Box>
   );
 
