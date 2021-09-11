@@ -12,16 +12,22 @@ import {
   Typography
 } from '@material-ui/core';
 import {
-  AlertCircle as AlertCircleIcon,
+  // AlertCircle as AlertCircleIcon,
   BarChart as BarChartIcon,
-  Lock as LockIcon,
-  Settings as SettingsIcon,
+  // Lock as LockIcon,
+  // Settings as SettingsIcon,
   // ShoppingBag as ShoppingBagIcon,
-  User as UserIcon,
-  UserPlus as UserPlusIcon,
-  Users as UsersIcon
+  // User as UserIcon,
+  // UserPlus as UserPlusIcon,
+  Users as UsersIcon,
+  // Business as BusinessIcon,
 } from 'react-feather';
+import BusinessIcon from '@material-ui/icons/Business';
+import DescriptionIcon from '@material-ui/icons/Description';
+import CachedIcon from '@material-ui/icons/Cached';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import NavItem from './NavItem';
+
 import './DashboardSidebar.css';
 
 const user = {
@@ -37,40 +43,65 @@ const items = [
     title: 'Dashboard'
   },
   {
+    href: '/app/properties',
+    icon: BusinessIcon,
+    title: 'Properties'
+  },
+  {
     href: '/app/customers',
     icon: UsersIcon,
-    title: 'Customers'
+    title: 'Tenants'
+  },
+  {
+    href: '/app/contracts',
+    icon: DescriptionIcon,
+    title: 'Contracts'
+  },
+  {
+    href: '/app/maintenance',
+    icon: CachedIcon,
+    title: 'Maintenance'
+  },
+  {
+    href: '/app/accounting',
+    icon: AccountBalanceIcon,
+    title: 'Accounting'
+  },
+  {
+    href: '/app/service_requests',
+    icon: AccountBalanceIcon,
+    title: 'Service Requests'
   },
   // {
   //   href: '/app/products',
   //   icon: ShoppingBagIcon,
   //   title: 'Products'
   // },
-  {
-    href: '/app/account',
-    icon: UserIcon,
-    title: 'Account'
-  },
-  {
-    href: '/app/settings',
-    icon: SettingsIcon,
-    title: 'Settings'
-  },
-  {
-    href: '/login',
-    icon: LockIcon,
-    title: 'Login'
-  },
-  {
-    href: '/register',
-    icon: UserPlusIcon,
-    title: 'Register'
-  },
-  {
-    href: '/404',
-    icon: AlertCircleIcon,
-    title: 'Error'
-  }
+  // {
+  //   href: '/app/account',
+  //   icon: UserIcon,
+  //   title: 'Account'
+  // },
+  // {
+  //   href: '/app/settings',
+  //   icon: SettingsIcon,
+  //   title: 'Settings'
+  // },
+  // {
+  //   href: '/login',
+  //   icon: LockIcon,
+  //   title: 'Login'
+  // },
+  // {
+  //   href: '/register',
+  //   icon: UserPlusIcon,
+  //   title: 'Register'
+  // },
+  // {
+  //   href: '/404',
+  //   icon: AlertCircleIcon,
+  //   title: 'Error'
+  // }
 ];
 
 const DashboardSidebar = ({ onMobileClose, openMobile }) => {
@@ -114,12 +145,12 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
         >
           {user.name}
         </Typography>
-        <Typography
+        {/* <Typography
           color="textSecondary"
           variant="body2"
         >
           {user.jobTitle}
-        </Typography>
+        </Typography> */}
       </Box>
       <Divider />
       <Box sx={{ p: 2 }}>
